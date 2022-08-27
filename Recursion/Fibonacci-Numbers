@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args)throws IOException {
+        int num;
+        InputStreamReader isr=new InputStreamReader(System.in);
+        BufferedReader br=new BufferedReader(isr);
+        num=Integer.parseInt(br.readLine());
+        System.out.println(fibonacci(num));
+       
+    }
+     public static int fibonacci(int num)
+        {
+            if(num==0)
+            {
+                return 0;
+            }else
+            if(num==1)
+            {
+                return 1;
+            }else
+            return  fibonacci(num-1)+fibonacci(num-2);
+        }
+}
